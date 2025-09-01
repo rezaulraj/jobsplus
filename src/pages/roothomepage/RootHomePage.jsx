@@ -45,7 +45,7 @@ const RootHomePage = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setExpanded(false)}
-                className="absolute -top-20 right-3 text-gray-100 hover:text-red-500 border rounded-full p-1"
+                className="absolute -top-20 right-3 text-gray-300 hover:text-red-500 border-2 rounded-full p-1"
               >
                 <AiOutlineClose size={22} />
               </motion.button>

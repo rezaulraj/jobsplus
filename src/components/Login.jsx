@@ -69,7 +69,6 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Password Input */}
           <div className="relative">
             <label
               htmlFor="password"

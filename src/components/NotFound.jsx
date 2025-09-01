@@ -6,7 +6,6 @@ const NotFound = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-lg w-full space-y-8 text-center">
-        {/* Animated 404 */}
         <div className="relative">
           <h1 className="text-9xl font-bold text-gray-800 opacity-10">404</h1>
           <div className="absolute inset-0 flex items-center justify-center">
@@ -26,7 +25,6 @@ const NotFound = () => {
           </div>
         </div>
 
-        {/* Content */}
         <div>
           <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
             Lost in Space
@@ -37,7 +35,6 @@ const NotFound = () => {
           </p>
         </div>
 
-        {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/"
@@ -64,7 +61,6 @@ const NotFound = () => {
           </button>
         </div>
 
-        {/* Additional Help */}
         <div className="pt-8">
           <p className="text-sm text-gray-500">
             Still lost?{" "}
@@ -77,7 +73,6 @@ const NotFound = () => {
           </p>
         </div>
 
-        {/* Decorative elements */}
         <div className="absolute bottom-8 left-8 opacity-10">
           <svg
             width="100"

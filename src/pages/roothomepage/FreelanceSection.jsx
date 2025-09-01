@@ -45,14 +45,24 @@ const FreelanceSection = () => {
   return (
     <section className="py-8 bg-gray-100">
       <div className="container mx-auto px-4">
-        <div className="border-b border-gray-300 mb-4">
-          <h2 className="text-2xl font-bold text-center mb-8 text-gray-800 ">
+        <div className="border-b border-gray-300 mb-4 flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-center mb-8 text-gray-700 ">
             Freelance Side Hustles - Make Extra Income
           </h2>
-          {/* <div className="flex items-center justify-end">
-            <a href="">Hire a Freelancer</a>
-            <a href="">View all Projects</a>
-          </div> */}
+          <div className="flex items-center justify-center gap-4">
+            <a
+              href=""
+              className="underline hover:text-blue-700 text-blue-800 text-[15px] font-lato font-semibold transition-colors tracking-wide duration-200"
+            >
+              Hire a Freelancer
+            </a>
+            <a
+              href=""
+              className="underline hover:text-blue-700 text-blue-800 text-[15px] font-lato font-semibold transition-colors tracking-wide duration-200"
+            >
+              View all Projects
+            </a>
+          </div>
         </div>
 
         <div className="relative ">

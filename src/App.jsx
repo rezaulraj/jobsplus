@@ -4,6 +4,7 @@ import RootLayout from "./layout/RootLayout";
 import RootHomePage from "./pages/roothomepage/RootHomePage";
 import Register from "./components/Register";
 import NotFound from "./components/NotFound";
+import Login from "./components/Login";
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<RootLayout />}>
             <Route path="/" element={<RootHomePage />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

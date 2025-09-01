@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { AiOutlineClose } from "react-icons/ai"; // cancel/close icon
+import { AiOutlineClose } from "react-icons/ai";
 import heroImage from "../../assets/home/banner_bg.webp";
 import rightImage from "../../assets/home/bg-blue-main.webp";
 
@@ -45,7 +45,7 @@ const RootHomePage = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setExpanded(false)}
-                className="absolute -top-20 right-3 text-gray-100 hover:text-red-500 border rounded-full p-1" 
+                className="absolute -top-20 right-3 text-gray-100 hover:text-red-500 border rounded-full p-1"
               >
                 <AiOutlineClose size={22} />
               </motion.button>

@@ -35,7 +35,7 @@ const RootHomePage = () => {
         )}
       </AnimatePresence>
 
-      <div className="relative z-30 w-full max-w-5xl px-4">
+      <div className="relative z-30 w-full max-w-4xl px-4">
         <div className="relative">
           <AnimatePresence>
             {expanded && (

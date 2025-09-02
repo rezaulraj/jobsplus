@@ -134,7 +134,6 @@ const FreelanceSection = () => {
             ))}
           </Swiper>
 
-          {/* Custom Navigation Arrows */}
           <div
             ref={prevRef}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-10 cursor-pointer bg-white rounded-full p-3 shadow-md hover:bg-gray-100 transition-colors duration-300 swiper-button-prev-custom"

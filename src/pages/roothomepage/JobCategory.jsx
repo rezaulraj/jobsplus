@@ -22,6 +22,7 @@ import {
   FaShippingFast,
   FaPlusCircle,
   FaChevronRight,
+  FaCode,
 } from "react-icons/fa";
 
 const JobCategory = () => {
@@ -35,6 +36,7 @@ const JobCategory = () => {
     { name: "Recruitment/Employment Firms", count: 177, icon: <FaUsers /> },
     { name: "Travel/Tourism/Transportation", count: 157, icon: <FaPlane /> },
     { name: "Education/Training", count: 125, icon: <FaGraduationCap /> },
+    { name: "IT/Telecommunication", count: 125, icon: <FaCode /> },
     { name: "Call Center", count: 116, icon: <FaPhone /> },
     { name: "Consultants", count: 104, icon: <FaBriefcase /> },
     { name: "Banking/Financial Services", count: 98, icon: <FaBuilding /> },
@@ -90,7 +92,7 @@ const JobCategory = () => {
     switch (activeTab) {
       case "industry":
         return (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3">
             {jobCategories.map((category) => (
               <motion.div
                 key={category.name}
@@ -102,7 +104,7 @@ const JobCategory = () => {
                 </span>
                 <a
                   href="#"
-                  className="text-gray-700 hover:text-blue-600 flex items-center w-full min-w-0"
+                  className="text-gray-700 hover:text-blue-600 flex items-center font-lato w-full min-w-0"
                 >
                   <span className="truncate flex-1">{category.name}</span>
                   <span className="text-gray-500 ml-1 flex-shrink-0">
@@ -118,7 +120,7 @@ const JobCategory = () => {
               <span className="text-[#46B749] mr-3 text-lg">
                 <FaPlusCircle />
               </span>
-              <a href="#" className="text-blue-600 font-semibold">
+              <a href="#" className="text-blue-600 font-lato font-semibold">
                 More Industries
               </a>
             </motion.div>
@@ -217,7 +219,7 @@ const JobCategory = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 bg-white rounded-xl shadow-lg p-6">
             <div className=" mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-3">
+              <h2 className="text-2xl font-bold text-gray-700 mb-3">
                 Browse Jobs in Pakistan
               </h2>
             </div>
@@ -252,7 +254,7 @@ const JobCategory = () => {
 
           <div className="bg-white rounded-xl shadow-lg p-6 h-full">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-xl font-bold text-gray-800">Top Employers</h2>
+              <h2 className="text-xl font-bold text-gray-700">Top Employers</h2>
               <a
                 href="#"
                 className="hover:text-blue-700 text-blue-800 hover:underline text-sm font-semibold flex items-center"

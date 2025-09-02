@@ -96,18 +96,18 @@ const FreelanceSection = () => {
           >
             {freelanceJobs.map((job, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden h-76 transition-transform duration-300 hover:scale-105 flex flex-col">
-                  <div className="p-6 flex flex-col h-full">
-                    <h3 className="text-lg font-semibold font-lato text-gray-950 mb-2 line-clamp-1">
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden h-72 transition-transform duration-300 hover:scale-105 flex flex-col">
+                  <div className="p-4 flex flex-col h-full">
+                    <h3 className="text-sm font-semibold font-lato text-gray-950 mb-2 line-clamp-1">
                       {job.title}
                     </h3>
-                    <p className="text-gray-600 mb-3">{job.company}</p>
-                    <p className="text-[#46B749] font-medium mb-4">
+                    <p className="text-gray-600 mb-3 font-lato">{job.company}</p>
+                    <p className="text-[#46B749] font-medium mb-4 font-lato">
                       {job.rate}
                     </p>
 
                     <div className="mb-4 flex-grow overflow-y-auto">
-                      <h4 className="text-sm font-medium text-gray-500 mb-2">
+                      <h4 className="text-[15px] font-medium text-gray-500 mb-2 font-lato">
                         Skills Required:
                       </h4>
                       <div className="flex flex-wrap gap-2">
@@ -116,7 +116,7 @@ const FreelanceSection = () => {
                             skill && (
                               <span
                                 key={skillIndex}
-                                className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+                                className="px-3 py-1 font-lato bg-blue-100 text-blue-800 text-xs rounded-full"
                               >
                                 {skill}
                               </span>
@@ -125,7 +125,7 @@ const FreelanceSection = () => {
                       </div>
                     </div>
 
-                    <button className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 mt-auto">
+                    <button className="w-full py-2 font-lato bg-[#1F75FF] text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 mt-auto">
                       Project Details
                     </button>
                   </div>

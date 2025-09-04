@@ -9,38 +9,40 @@ const RootHomePage = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gray-100">
+    <div className="relative md:min-h-[65vh] 2xl:min-h-[25vh] flex items-center justify-center overflow-hidden bg-gray-100">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
-      <div className="hidden lg:block absolute right-0 bottom-0 max-w-lg h-full z-10">
-        <img
-          src={rightImage}
-          alt="Career professionals"
-          className="w-full h-full object-contain"
-          onError={() => console.error("Failed to load rightImage")}
-          loading="lazy"
-        />
-        <div className="absolute bottom-6 right-1 flex flex-col items-center justify-center z-20">
-          <a href="#" className="flex flex-col items-center text-center">
-            <div className="w-36 h-36 bg-white rounded-full">
-              <img
-                src={herologo}
-                alt="Hero Logo"
-                className="w-36 h-36 object-contain"
-                onError={() => console.error("Failed to load herologo")}
-              />
-            </div>
-            <span className="text-lg text-gray-200 mt-1 font-lato">
-              <span className="text-4xl font-bold">Earn Extra Income</span>{" "}
-              <br />
-              find a freelance side hustles
-            </span>
-          </a>
+      <div className="hidden lg:block absolute right-0 top-0 bottom-0 h-[70vh] w-2.5/6 z-10">
+        <div className="relative h-full w-full">
+          <img
+            src={rightImage}
+            alt="Career professionals"
+            className="h-full w-full object-cover object-left"
+            onError={() => console.error("Failed to load rightImage")}
+            loading="lazy"
+          />
+          <div className="absolute bottom-[10%] right-1 flex flex-col items-center justify-center z-20">
+            <a href="#" className="flex flex-col items-center text-center">
+              <div className="w-36 h-36 bg-white rounded-full">
+                <img
+                  src={herologo}
+                  alt="Hero Logo"
+                  className="w-36 h-36 object-contain"
+                  onError={() => console.error("Failed to load herologo")}
+                />
+              </div>
+              <span className="text-lg text-gray-200 mt-1 font-lato">
+                <span className="text-4xl font-bold">Earn Extra Income</span>{" "}
+                <br />
+                find a freelance side hustles
+              </span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -52,12 +54,16 @@ const RootHomePage = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             onClick={() => setExpanded(false)}
-            className="absolute inset-0 bg-black/50 z-20"
+            className="absolute inset-0 bg-black/90 z-20"
           ></motion.div>
         )}
       </AnimatePresence>
 
-      <div className="relative z-30 w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div
+        className={`relative z-30 w-full  ${
+          expanded ? "max-w-6xl" : "max-w-4xl"
+        } px-4 sm:px-6 lg:px-8`}
+      >
         <div className="relative">
           <AnimatePresence>
             {expanded && (
@@ -73,14 +79,11 @@ const RootHomePage = () => {
               </motion.button>
             )}
           </AnimatePresence>
-          {/* <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight text-center md:text-left">
-            Find Your <span className="text-blue-400">Dream Career</span> Today
-          </h1> */}
           <div className="flex flex-col md:flex-row gap-3 items-stretch">
             <input
               type="text"
               placeholder="Search jobs..."
-              className="flex-1 px-4 py-3 bg-white/90 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+              className="flex-1 px-4 py-3 bg-white/90 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-500"
               onFocus={() => setExpanded(true)}
             />
             <AnimatePresence>

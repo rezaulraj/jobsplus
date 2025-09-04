@@ -6,6 +6,7 @@ import NotFound from "./components/NotFound";
 import Login from "./components/Login";
 import RootHome from "./pages/roothomepage/RootHome";
 function App() {
+  const user = true;
   return (
     <>
       <BrowserRouter>

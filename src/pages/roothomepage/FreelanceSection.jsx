@@ -49,7 +49,7 @@ const FreelanceSection = () => {
           <h2 className="text-2xl font-bold text-center mb-8 text-gray-700 ">
             Freelance Side Hustles - Make Extra Income
           </h2>
-          <div className="flex items-center justify-center gap-4">
+          <div className="block md:flex items-center justify-center gap-4">
             <a
               href=""
               className="underline hover:text-blue-700 text-blue-800 text-[15px] font-lato font-semibold transition-colors tracking-wide duration-200"
@@ -101,7 +101,9 @@ const FreelanceSection = () => {
                     <h3 className="text-sm font-semibold font-lato text-gray-950 mb-2 line-clamp-1">
                       {job.title}
                     </h3>
-                    <p className="text-gray-600 mb-3 font-lato">{job.company}</p>
+                    <p className="text-gray-600 mb-3 font-lato">
+                      {job.company}
+                    </p>
                     <p className="text-[#46B749] font-medium mb-4 font-lato">
                       {job.rate}
                     </p>

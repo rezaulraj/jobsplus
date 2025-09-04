@@ -19,9 +19,30 @@ const RootHeader = () => {
     },
   ];
 
+  const user = true;
+
+  const profile = [
+    {
+      lable: "Edit Profile",
+      path: "/profile",
+    },
+    {
+      lable: "View Profile",
+      path: "/view-profile",
+    },
+    {
+      lable: "Video CV",
+      path: "/video-cv",
+    },
+    {
+      lable: "Apply Jobs",
+      path: "/apply-jobs",
+    },
+  ];
+
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
             <a href="/">

@@ -91,14 +91,17 @@ const SeniorManagment = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-10">
           <div className="flex-grow text-center">
-            <h2 className="text-2xl font-bold text-gray-700">
+            <h2 className="text-2xl font-bold font-lato text-gray-700">
               Senior Management Jobs
             </h2>
           </div>
           <div className="flex-shrink-0">
-            <button className="hover:text-blue-700 underline text-blue-800 font-semibold transition-colors">
+            <a
+              href=""
+              className="hover:text-blue-700 text-sm font-lato hover:underline text-blue-800 font-semibold transition-colors"
+            >
               View All &rarr;
-            </button>
+            </a>
           </div>
         </div>
 
@@ -173,10 +176,12 @@ const SeniorManagment = () => {
                 </div>
 
                 <div className="p-4">
-                  <h3 className="text-[15px] font-semibold text-gray-700 mb-1 line-clamp-1">
+                  <h3 className="text-[15px] font-semibold font-lato text-gray-700 mb-1 line-clamp-1">
                     {job.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">{job.companyname}</p>
+                  <p className="text-gray-600 font-lato text-sm">
+                    {job.companyname}
+                  </p>
                 </div>
               </div>
             ))}

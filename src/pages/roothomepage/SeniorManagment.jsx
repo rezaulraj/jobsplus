@@ -87,8 +87,8 @@ const SeniorManagment = () => {
   };
 
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-white py-12 px-4 sm:px-6 lg:px-12">
+      <div className="container mx-auto">
         <div className="flex justify-between items-center mb-10">
           <div className="flex-grow text-center">
             <h2 className="text-2xl font-bold font-lato text-gray-700">

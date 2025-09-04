@@ -47,7 +47,7 @@ const TopJobs = () => {
 
   return (
     <div className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-2">
         <h2 className="text-2xl font-bold text-[#1E2558]/90 mb-4">Top Jobs</h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 border divide-y divide-x p-2 border-gray-300 divide-gray-500">

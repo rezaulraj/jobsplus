@@ -92,14 +92,12 @@ const SeekHeader = () => {
     },
   ];
 
-  // Sample user data
   const userData = {
     name: "John Doe",
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
     role: "Software Developer",
   };
 
-  // Sample search suggestions
   const sampleSuggestions = [
     "Frontend Developer",
     "Remote Jobs",
@@ -108,7 +106,6 @@ const SeekHeader = () => {
     "Product Manager",
   ];
 
-  // Handle dropdown toggle
   const toggleDropdown = (index) => {
     if (activeDropdown === index) {
       setActiveDropdown(null);
@@ -117,7 +114,6 @@ const SeekHeader = () => {
     }
   };
 
-  // Handle search toggle
   const toggleSearch = () => {
     setIsSearchOpen(!isSearchOpen);
     if (!isSearchOpen) {
@@ -127,17 +123,14 @@ const SeekHeader = () => {
     }
   };
 
-  // Handle profile toggle
   const toggleProfile = () => {
     setIsProfileOpen(!isProfileOpen);
   };
 
-  // Handle mobile nav toggle
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
   };
 
-  // Handle search input change
   const handleSearchChange = (e) => {
     const value = e.target.value;
     setSearchQuery(value);
@@ -152,7 +145,6 @@ const SeekHeader = () => {
     }
   };
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (profileRef.current && !profileRef.current.contains(event.target)) {
@@ -175,7 +167,6 @@ const SeekHeader = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-lg">
-      {/* Expanding Search Overlay */}
       <div
         className={`fixed top-0 left-0 w-full bg-white shadow-md transform transition-all duration-500 ease-in-out z-50 ${
           isSearchOpen ? "translate-y-0" : "-translate-y-full"
@@ -214,16 +205,13 @@ const SeekHeader = () => {
         </div>
       </div>
 
-      {/* Main Header Content */}
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
-        {/* Logo */}
         <div className="flex-shrink-0">
           <a href="/">
             <img src={logo} alt="Seek Logo" className="h-8 w-auto md:h-10" />
           </a>
         </div>
 
-        {/* Navigation Items - Desktop */}
         <nav className="hidden md:flex space-x-1 h-full">
           {navItems.map((item, index) => (
             <div
@@ -268,9 +256,7 @@ const SeekHeader = () => {
           ))}
         </nav>
 
-        {/* Right Side Actions */}
         <div className="flex items-center space-x-4">
-          {/* Search Icon */}
           <button
             className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
             onClick={toggleSearch}
@@ -278,7 +264,6 @@ const SeekHeader = () => {
             <FaSearch className="h-5 w-5" />
           </button>
 
-          {/* Profile Section */}
           <div className="relative" ref={profileRef}>
             <button
               className="flex items-center focus:outline-none"
@@ -332,7 +317,6 @@ const SeekHeader = () => {
             )}
           </div>
 
-          {/* Mobile Navigation Toggle */}
           <button
             className="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors mobile-nav-toggle"
             onClick={toggleMobileNav}
@@ -342,7 +326,6 @@ const SeekHeader = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div
         ref={mobileNavRef}
         className={`md:hidden fixed top-16 left-0 w-full h-[calc(100vh-4rem)] bg-white transform transition-transform duration-300 ease-in-out z-40 overflow-y-auto ${

@@ -15,6 +15,16 @@ import {
   FaTimes,
   FaBars,
 } from "react-icons/fa";
+import { LiaTachometerAltSolid } from "react-icons/lia";
+import { TbUserSquareRounded } from "react-icons/tb";
+import { IoBriefcaseOutline } from "react-icons/io5";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { TbFileCv } from "react-icons/tb";
+import { AiOutlineInbox } from "react-icons/ai";
+import { GoSearch } from "react-icons/go";
+import { RiFileList2Line } from "react-icons/ri";
+import { BsPersonVideo3 } from "react-icons/bs";
+
 import logo from "../assets/logo.png";
 const SeekHeader = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -31,62 +41,62 @@ const SeekHeader = () => {
     {
       label: "Dashboard",
       path: "/dashboard",
-      icon: <FaHome className="h-5 w-5" />,
+      icon: <LiaTachometerAltSolid className="h-5 w-5" />,
     },
     {
       label: "Profile",
       path: "/profile",
-      icon: <FaUser className="h-5 w-5" />,
+      icon: <TbUserSquareRounded className="h-5 w-5" />,
     },
     {
       label: "Jobs",
-      icon: <FaBriefcase className="h-5 w-5" />,
+      icon: <IoBriefcaseOutline className="h-5 w-5" />,
       subNav: [
         {
           label: "My Job Applications",
           path: "/my-job-apply",
-          icon: <FaFileAlt className="h-4 w-4" />,
+          icon: <RiFileList2Line className="h-4 w-4" />,
         },
         {
           label: "My Alerts",
           path: "/my-alerts",
-          icon: <FaEnvelope className="h-4 w-4" />,
+          icon: <HiOutlineEnvelope className="h-4 w-4" />,
         },
         {
           label: "Saved Jobs",
           path: "/saved-jobs",
-          icon: <FaBriefcase className="h-4 w-4" />,
+          icon: <IoBriefcaseOutline className="h-4 w-4" />,
         },
       ],
     },
     {
       label: "Message",
       path: "/message",
-      icon: <FaEnvelope className="h-5 w-5" />,
+      icon: <HiOutlineEnvelope className="h-5 w-5" />,
     },
     {
       label: "CV Manager",
       path: "/cv-manager",
-      icon: <FaFileAlt className="h-5 w-5" />,
+      icon: <TbFileCv className="h-5 w-5" />,
     },
     {
       label: "Products",
-      icon: <FaShoppingBag className="h-5 w-5" />,
+      icon: <AiOutlineInbox className="h-5 w-5" />,
       subNav: [
         {
           label: "CV Written Service",
           path: "/cv-writing",
-          icon: <FaFileAlt className="h-4 w-4" />,
+          icon: <RiFileList2Line className="h-4 w-4" />,
         },
         {
           label: "Career Coaching",
           path: "/career-coaching",
-          icon: <FaUser className="h-4 w-4" />,
+          icon: <TbUserSquareRounded className="h-4 w-4" />,
         },
         {
           label: "Interview Preparation",
           path: "/interview-prep",
-          icon: <FaBriefcase className="h-4 w-4" />,
+          icon: <BsPersonVideo3 className="h-4 w-4" />,
         },
       ],
     },
@@ -168,7 +178,7 @@ const SeekHeader = () => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-lg">
       <div
-        className={`fixed top-0 left-0 w-full bg-white shadow-md transform transition-all duration-500 ease-in-out z-50 ${
+        className={`fixed top-0 left-0 w-full bg-gray-100 shadow-md transform transition-all duration-500 ease-in-out z-50 ${
           isSearchOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -196,7 +206,7 @@ const SeekHeader = () => {
                   key={index}
                   className="flex items-center p-3 hover:bg-blue-50 cursor-pointer border-b border-gray-100 last:border-b-0"
                 >
-                  <FaSearch className="h-4 w-4 text-gray-400 mr-3" />
+                  <GoSearch className="h-4 w-4 text-gray-400 mr-3" />
                   <span className="text-gray-700">{item}</span>
                 </div>
               ))}
@@ -221,7 +231,7 @@ const SeekHeader = () => {
               onMouseLeave={() => item.subNav && setActiveDropdown(null)}
             >
               <div
-                className={`flex items-center h-full px-4 cursor-pointer transition-colors ${
+                className={`flex items-center h-full px-4 cursor-pointer ${
                   activeDropdown === index
                     ? "bg-gray-100 text-[#1F75FF]"
                     : "text-[#1E2558] hover:bg-gray-100 hover:text-text-[#1F75FF] "
@@ -229,7 +239,7 @@ const SeekHeader = () => {
                 onClick={() => item.subNav && toggleDropdown(index)}
               >
                 <span className="mr-2">{item.icon}</span>
-                <span className="text-[#1E2558]">{item.label}</span>
+                <span className="text-[#1E2558] font-lato ">{item.label}</span>
                 {item.subNav &&
                   (activeDropdown === index ? (
                     <FaChevronUp className="ml-2 h-3 w-3" />
@@ -239,14 +249,16 @@ const SeekHeader = () => {
               </div>
 
               {item.subNav && activeDropdown === index && (
-                <div className="absolute left-0 mt-0 w-56 bg-white rounded-md shadow-lg py-1 z-10 border border-gray-200">
+                <div className="absolute left-0 mt-0 w-56 bg-gray-100 rounded-md shadow-lg py-1 z-10 border border-gray-200">
                   {item.subNav.map((subItem, subIndex) => (
                     <a
                       key={subIndex}
                       href={subItem.path}
-                      className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                      className="flex items-center px-4 py-2 text-sm text-[#1E2558] hover:bg-blue-50 hover:text-[#1F75FF]"
                     >
-                      <span className="mr-3 text-gray-400">{subItem.icon}</span>
+                      <span className="mr-3 text-[#1E2558]">
+                        {subItem.icon}
+                      </span>
                       <span>{subItem.label}</span>
                     </a>
                   ))}
@@ -261,7 +273,7 @@ const SeekHeader = () => {
             className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
             onClick={toggleSearch}
           >
-            <FaSearch className="h-5 w-5" />
+            <GoSearch className="h-5 w-5" />
           </button>
 
           <div className="relative" ref={profileRef}>

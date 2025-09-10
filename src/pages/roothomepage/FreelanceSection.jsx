@@ -51,13 +51,13 @@ const FreelanceSection = () => {
           </h2>
           <div className="block md:flex items-center justify-center gap-4">
             <a
-              href=""
+              href="#"
               className="underline hover:text-blue-700 text-blue-800 text-[15px] font-lato font-semibold transition-colors tracking-wide duration-200"
             >
               Hire a Freelancer
             </a>
             <a
-              href=""
+              href="#"
               className="underline hover:text-blue-700 text-blue-800 text-[15px] font-lato font-semibold transition-colors tracking-wide duration-200"
             >
               View all Projects

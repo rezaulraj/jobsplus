@@ -9,7 +9,7 @@ const RootHomePage = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="relative md:min-h-[65vh] 2xl:min-h-[25vh] flex items-center justify-center overflow-hidden bg-gray-100">
+    <div className="relative min-h-[65vh] 2xl:min-h-[25vh] flex items-center justify-center overflow-hidden bg-gray-100">
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}

@@ -1,12 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import {
-  FaHome,
   FaUser,
-  FaBriefcase,
-  FaEnvelope,
-  FaFileAlt,
-  FaShoppingBag,
-  FaSearch,
   FaCog,
   FaKey,
   FaSignOutAlt,
